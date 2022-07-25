@@ -1,0 +1,33 @@
+@font-face {
+  font-family: Fira Code;
+  src: url(ttf/FiraCode-Regular.ttf);
+}
+
+body{
+ background: rgb(107, 165, 241);
+ font: normal 15pt;
+ font-family: Fira Code;
+}
+header{
+  color: white;
+  text-align: center;
+}
+section{
+  background: WHITE;
+  border-radius: 10px;
+  padding: 15px;
+  width: 500px;
+  margin: auto;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.185);
+  
+}
+
+select#flista{
+  width: 150px;
+}
+
+footer{
+  color: black;
+  text-align: center;
+  font-style: italic;
+}
