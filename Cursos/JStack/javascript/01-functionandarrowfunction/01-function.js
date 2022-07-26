@@ -1,9 +1,11 @@
 // Função normal cria o seu proprio objeto 'this'/contexto apartir de quando usamos o NEW
 function minhaFunction(){
-// This = deste
+// This = Este/Deste
   this.name = 'Luiz';
   
 
+
+  
 console.log( new minhaFunction());
 console.log(this)
 }

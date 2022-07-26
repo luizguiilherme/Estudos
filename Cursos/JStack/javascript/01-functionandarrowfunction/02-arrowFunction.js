@@ -1,4 +1,4 @@
-// Arrow Function usa o 'this' do contexto onde ela foi criada
+// .
 const minhaArrowFunction = () => {
   this.lastname = 'Oliveira'
 };
@@ -12,7 +12,15 @@ minhaArrowFunction();
 soma(1, 2, 3, 4, 5, 6, 7, 'Luiz');
 
 //Short syntax
-const num = 10;
+
+//const soma = () => 'Hello World'
+
+// const soma = () => (
+//   algumnumero >= 10
+//     ?'Maior igual a 10'
+//     :'Menor que 10'
+// )
+
 const getuser = () => ({
   id: '123',
   name: 'Luiz',
