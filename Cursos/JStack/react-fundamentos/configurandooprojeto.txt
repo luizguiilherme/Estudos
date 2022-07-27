@@ -1,0 +1,23 @@
+                                        BABEL
+------------------------------------------------------------------------------------------------
+| Iniciando o packge.json -> yarn init - y                                                     |
+| Instalando dependecias -> yarn add @babel/core @babel/preset-env @babel/cli -D               |
+| Crirao arquivo de config do babel(olhar a config no arquivo) ".babelrc"                      |
+------------------------------------------------------------------------------------------------
+                                        REACT
+------------------------------------------------------------------------------------------------
+| Instalando a dependencia do React no Babel -> yarn add @babel/preset-react-D                 |
+| Instalando a dependecia do ReactDOM -> yarn add react@^17.0.2 react-dom@^17.0.2              |
+------------------------------------------------------------------------------------------------
+                                      WEBPACK
+------------------------------------------------------------------------------------------------
+| Instalando a dependencia do Webpack -> yarn add webpack webpack-cli -D                       |
+| Criar arquivo de config do Webpack(olha a config no arquivo) "webpack.config.js"             |
+| Instalar o HtmlWebpackPlugin yarn html-webpack-plugin -D                                     |
+------------------------------------------------------------------------------------------------
+                                      LOADERS
+------------------------------------------------------------------------------------------------
+|Desistala o @babel/cli -> yarn remove @babel/cli
+|Instalar dependencia do loader no babel -> yar add babel-loader -D
+|Cinfigurar o module no "webpack.config.js" https://webpack.js.org/concepts/#loaders
+|
