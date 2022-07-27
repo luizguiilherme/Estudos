@@ -1,9 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import App from './App'
+
+// "function" Functional Comonent (Componente Funcional)
+
+// "class" Class Component (Componente de Classe)
+
+
 
 ReactDOM.render(
-  <h1 id='title'>
-    <span>Hello world!</span> 
-    </h1>,
+  <App />,
   document.getElementById('root'),
 );
