@@ -6,8 +6,6 @@ import App from './App'
 
 // "class" Class Component (Componente de Classe)
 
-
-
 ReactDOM.render(
   <App />,
   document.getElementById('root'),

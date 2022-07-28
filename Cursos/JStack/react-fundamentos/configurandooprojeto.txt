@@ -20,4 +20,7 @@
 |Desistala o @babel/cli -> yarn remove @babel/cli
 |Instalar dependencia do loader no babel -> yar add babel-loader -D
 |Cinfigurar o module no "webpack.config.js" https://webpack.js.org/concepts/#loaders
-|
+------------------------------------------------------------------------------------------------
+                                      PROP-Types
+------------------------------------------------------------------------------------------------
+| Instalar dependencia prop-types -> yar add prop-types
