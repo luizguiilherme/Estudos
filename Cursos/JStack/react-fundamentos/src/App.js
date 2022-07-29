@@ -1,19 +1,21 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import Post from "./Post";
 import Header from "./Header";
 
+import { ThemeProvider } from "./ThemeContext";
 
 
 // Render -> Renderizar
 // Props -> Propriedades
 function App(){
+  
   const [posts, setPosts] = useState([
     {id: Math.random(), title: 'Title#01', subtitle: 'Sub#01', likes: 20, read: false},
     {id: Math.random(), title: 'Title#02', subtitle: 'Sub#02', likes: 10, read: true},
     {id: Math.random(), title: 'Title#03', subtitle: 'Sub#03', likes: 50, read: false},
     {id: Math.random(), title: 'Title#04', subtitle: 'Sub#04', likes: 50, read: true},
   ]);
-
+  
   function handleRefresh(){
     setTimeout(() => {
       setPosts((prevState) => [
@@ -22,7 +24,8 @@ function App(){
         id: Math.random(), 
         title: `Title#0${prevState.length + 1}`, 
         subtitle: `Sub#0${prevState.length + 1}`, 
-        likes: 50
+        likes: 50,
+        read: false,
        },
       ]);
     }, 2000)
@@ -36,8 +39,7 @@ function App(){
 
   }
   return (
-    // Formas de usar o react Fragments(<React.Fragments></React.Fragments>, <Fragments></Fragments> ou <></>)
-    <>
+    <ThemeProvider>
       
       <Header>
         <h2>
@@ -55,28 +57,7 @@ function App(){
           post={post}
         />
       ))}
-
-      {/* <Post 
-        likes = {20}
-        post={{
-          title: "Título da Notícia 01", subtitle:"Subtítulo da notícia 01",
-        }}
-      />
-      <Post 
-        likes={10}
-        post={{
-          title: "Título da Notícia 02", subtitle:"Subtítulo da notícia 02",
-        }}
-      />
-      <Post 
-        likes={50}
-        post={{
-          title: "Título da Notícia 03", subtitle:"Subtítulo da notícia 03",
-        }}
-      />
-       */}
-     
-    </>
+    </ThemeProvider>
   );
 }
 
