@@ -28,4 +28,5 @@
                                         CSS LOADERS
 | Instalar dependencia css-loaders -> yarn add css-loader style-loader -D  
 | Sass loader -> yarn add sass sass-loader -D (Só instalar se for usar)
-|   
+------------------------------------------------------------------------------------------------                                        STYLED COMPONENTS
+------------------------------------------------------------------------------------------------| Instalando dependencia styled-components -> yarn add styled-components     

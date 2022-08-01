@@ -1,8 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App'
+import App from './components/App'
 
-import './index.scss'
 // "function" Functional Comonent (Componente Funcional)
 
 // "class" Class Component (Componente de Classe)
