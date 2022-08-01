@@ -24,3 +24,8 @@
                                       PROP-Types
 ------------------------------------------------------------------------------------------------
 | Instalar dependencia prop-types -> yar add prop-types
+------------------------------------------------------------------------------------------------
+                                        CSS LOADERS
+| Instalar dependencia css-loaders -> yarn add css-loader style-loader -D  
+| Sass loader -> yarn add sass sass-loader -D (Só instalar se for usar)
+|   
