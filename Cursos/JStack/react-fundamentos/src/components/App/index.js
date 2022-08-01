@@ -1,11 +1,10 @@
 import React, { useState } from "react";
+
 import Post from "../Post";
 import Header from "../Header";
-
 import { ThemeProvider } from "../../context/ThemeContext";
 
-import styles from './App.scss';
-
+import { Title } from './styles';
 
 // Render -> Renderizar
 // Props -> Propriedades
@@ -47,10 +46,10 @@ function App(){
     <ThemeProvider>
       
       <Header>
-        <h2 className={styles.title}>
+        <Title as="h2">
           Posts da semana
           <button onClick={handleRefresh} >Atualizar</button>
-          </h2>
+        </Title>
       </ Header>
       <hr />
 
