@@ -19,8 +19,11 @@ function App() {
   }
 
   //Função de efeito
+  // useLayoutEffect só é executado depois que a função termina de ser executada 
   useEffect(() => {
-    localStorage.setItem('theme', JSON.stringify(theme));
+    for(let i = 0; i<= 10000; i++){
+      console.debug(i);
+    }
   }, [theme]);
 
   return (
@@ -33,5 +36,4 @@ function App() {
     </ThemeProvider>
   );
 };
-
 export default App;
