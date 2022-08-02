@@ -21,9 +21,7 @@ function App() {
   //Função de efeito
   // useLayoutEffect só é executado depois que a função termina de ser executada 
   useEffect(() => {
-    for(let i = 0; i<= 10000; i++){
-      console.debug(i);
-    }
+    console.debug('useEffect')
   }, [theme]);
 
   return (
