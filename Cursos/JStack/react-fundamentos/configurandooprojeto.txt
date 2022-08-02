@@ -13,7 +13,7 @@
 ------------------------------------------------------------------------------------------------
 | Instalando a dependencia do Webpack -> yarn add webpack webpack-cli -D                       |
 | Criar arquivo de config do Webpack(olha a config no arquivo) "webpack.config.js"             |
-| Instalar o HtmlWebpackPlugin yarn html-webpack-plugin -D                                     |
+| Instalar o HtmlWebpackPlugin -> yarn add html-webpack-plugin -D                              |
 ------------------------------------------------------------------------------------------------
                                       LOADERS
 ------------------------------------------------------------------------------------------------
