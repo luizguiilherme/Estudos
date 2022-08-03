@@ -8,35 +8,6 @@ import { ThemeProvider, ThemeContext } from './contexts/ThemeContext'
 import themes from './styles/themes';
 
 class App extends Component {
-  state = {
-    changed: false,
-  }
-  componentDidMount() {
-    console.log('componentDidMout')
-  }
-
-  componentDidUpdate(prevProps, prevState) {
-    console.log('componentDidUpdate', {
-      currentState: this.state,
-      prevState,
-      prevProps,
-    })
-  }
-
-  // componentDidCatch(error, info){
-  //   console.log({ error, info})
-  // }
-
-  shouldComponentUpdate(nextProps, nextState) {
-    console.log('shouldComponentUpdat', {
-      currentState: this.state,
-      nextState,
-      nextProps,
-    });
-
-    return false;
-  }
-
   render() {
     console.log('rendered')
     return (
@@ -45,9 +16,7 @@ class App extends Component {
           {({ theme, handleToggleTheme }) => (
             <StyledThemeProvider theme={themes[theme] || themes.dark}>
               <GlobalStyle />
-              <button onClick={handleToggleTheme}>Change State</button>
-              {theme === 'dark' && <Layout />}
-              <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+              <Layout />
             </StyledThemeProvider>
           )}
         </ThemeContext.Consumer>
