@@ -16,11 +16,17 @@ export class ThemeProvider extends React.Component {
 
     this.state = {
       theme,
+      batatinha: false,
+    }
+  }
+
+  componentDidUpdate(prevProps, prevState){
+    if(prevState.theme !== this.state.theme){
+      localStorage.setItem('theme', JSON.stringify(this.state.theme));
     }
   }
 
   handleToggleTheme = () => {
-    console.log('from context...')
     this.setState(prevState => ({
       theme: prevState.theme === 'dark' ? 'light' : 'dark'
       }), () => {
@@ -39,6 +45,7 @@ export class ThemeProvider extends React.Component {
           handleToggleTheme: this.handleToggleTheme 
         }}
       >
+        <button onClick={() => this.setState({ batatinha: 123})}>BATATINHA</button>
         {this.props.children}
       </ThemeContext.Provider>
     )
