@@ -8,14 +8,46 @@ import { ThemeProvider, ThemeContext } from './contexts/ThemeContext'
 import themes from './styles/themes';
 
 class App extends Component {
+  state = {
+    changed: false,
+  }
+  componentDidMount() {
+    console.log('componentDidMout')
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    console.log('componentDidUpdate', {
+      currentState: this.state,
+      prevState,
+      prevProps,
+    })
+  }
+
+  // componentDidCatch(error, info){
+  //   console.log({ error, info})
+  // }
+
+  shouldComponentUpdate(nextProps, nextState) {
+    console.log('shouldComponentUpdat', {
+      currentState: this.state,
+      nextState,
+      nextProps,
+    });
+
+    return false;
+  }
+
   render() {
+    console.log('rendered')
     return (
       <ThemeProvider>
         <ThemeContext.Consumer>
-          {({ theme }) => (
+          {({ theme, handleToggleTheme }) => (
             <StyledThemeProvider theme={themes[theme] || themes.dark}>
               <GlobalStyle />
-              <Layout/>
+              <button onClick={handleToggleTheme}>Change State</button>
+              {theme === 'dark' && <Layout />}
+              <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
             </StyledThemeProvider>
           )}
         </ThemeContext.Consumer>
@@ -25,27 +57,4 @@ class App extends Component {
   }
 }
 
-
-
-// function App() {
-//   const [theme, setTheme] = useState('dark');
-
-//   const currentTheme = useMemo(() => {
-//     return themes[theme] || themes.dark;
-//   }, [theme]);
-
-//   function handleToggleTheme(){
-//     setTheme(prevState => prevState === 'dark' ? 'light' : 'dark');
-//   }
-
-//   //Função de efeito
-//   // useLayoutEffect só é executado depois que a função termina de ser executada 
-//   useEffect(() => {
-//     console.debug('useEffect')
-//   }, [theme]);
-
-//   return (
-
-//   );
-// };
 export default App;
