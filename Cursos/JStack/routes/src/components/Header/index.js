@@ -1,34 +1,29 @@
-import React, { useContext } from "react";
-import PropTypes from "prop-types";
-import Button from "../Button";
+import React from 'react';
 
-import Title from '../Title'
+import { useHistory } from 'react-router-dom';
 
+import { Container } from './styles';
 
-import { ThemeContext } from "../../context/ThemeContext";
+export default function Header({ onToggleTheme, selectedTheme }) {
+  const history = useHistory();
 
-
-
-export default function Header(props){
-  const {onToggleTheme} = useContext(ThemeContext);
-
+  function handleNavigate(){
+    history.push('/')
+  }
+  
+  
+  
   return (
-    <>
-      <Title>{props.title}</Title>
-      <Button onClick={onToggleTheme}>
-        Mudar Tema
-      </Button>
-      {props.children}
-    </>
+    <Container>
+      <h1>JStack's Blog</h1>
+      <button
+        type="button" 
+        onClick={onToggleTheme}
+      >
+        {selectedTheme === 'dark' ? '🌝️' : '🌚️'}
+      </button>
+
+      <button onClick={handleNavigate} style={{ color: '#FFF'}}>Voltar para a Home</button>
+    </Container>
   );
-
-}
-
-Header.propTypes = {
-  title: PropTypes.string.isRequired,
-  children: PropTypes.node,
-}
-
-Header.defaultProps = {
-  title: `JStack's Blog`
 }
