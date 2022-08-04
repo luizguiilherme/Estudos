@@ -19,10 +19,10 @@ export default function Layout({ onToggleTheme, selectedTheme }) {
         <Link to="/posts/54159155">Post</Link>
       </Nav>
       <Routes />
-      <Footer
+      {/* <Footer
         onToggleTheme={onToggleTheme}
         selectedTheme={selectedTheme}
-      />
+      /> */}
     </BrowserRouter>
   );
 }
