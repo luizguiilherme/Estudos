@@ -1,3 +1,9 @@
+import PageHeader from '../../components/PageHeader';
+
 export default function EditContact() {
-  return 'Homepage';
+  return (
+    <PageHeader
+      title="Editar Luiz Guilherme"
+    />
+  );
 }
