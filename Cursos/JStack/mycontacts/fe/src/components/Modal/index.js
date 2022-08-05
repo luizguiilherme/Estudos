@@ -10,13 +10,14 @@ export default function Modal({ danger }) {
     <Overlay>
       <Container danger={danger}>
         <h1>Titulo do Modal</h1>
-        <p>Corpo do Modal</p>
+        <p>
+          Corpo do Modal
+        </p>
 
         <Footer>
           <button type="button" className="cancel-button">
             Cancelar
           </button>
-
           <Button type="button" danger={danger}>
             Deletar
           </Button>
@@ -24,7 +25,7 @@ export default function Modal({ danger }) {
       </Container>
     </Overlay>,
     document.getElementById('modal-root'),
-  )
+  );
 }
 
 Modal.propTypes = {
