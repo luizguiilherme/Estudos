@@ -7,13 +7,12 @@ import {
 import arrow from '../../assests/images/icons/arrow.svg';
 import edit from '../../assests/images/icons/edit.svg';
 import trash from '../../assests/images/icons/trash.svg';
-import Loader from '../../components/Loader';
+// import Loader from '../../components/Loader';
 // import Modal from '../../components/Modal';
 
 export default function Home() {
   return (
     <Container>
-      <Loader />
       <InputSearchContainer>
         <input type="text" placeholder="Pesquise pelo nome" />
       </InputSearchContainer>
