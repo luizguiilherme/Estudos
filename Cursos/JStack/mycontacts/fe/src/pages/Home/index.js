@@ -55,10 +55,16 @@ export default function Home() {
   );
 }
 
-fetch('http://localhost:3000/')
+fetch('http://localhost:3000')
   .then((response) => {
     console.log('response', response);
   })
   .catch((error) => {
     console.log('erro', error);
   });
+
+// SOP -> Same Origin Policy -> Política de mesma origem
+// Origin: protocolo://dominio:porta
+
+//   Saída: http://localhost:3000
+// Destino: http://localhost:3000
