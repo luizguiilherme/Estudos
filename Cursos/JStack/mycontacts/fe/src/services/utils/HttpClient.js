@@ -12,7 +12,7 @@ class HttpCliente {
     if (response.ok) {
       return response.json();
     }
-    throw new Error('Erro na API!');
+    throw new Error(`${response.status} - ${response.statusText}`);
   }
 }
 
