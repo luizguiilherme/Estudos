@@ -16,12 +16,12 @@ import {
   SearchNotFoundContainer,
 } from './styles';
 
-import arrow from '../../assests/images/icons/arrow.svg';
-import edit from '../../assests/images/icons/edit.svg';
-import trash from '../../assests/images/icons/trash.svg';
-import sad from '../../assests/images/icons/sad.svg';
-import emptyBox from '../../assests/images/icons/empty-box.svg';
-import magnifierQuestion from '../../assests/images/icons/magnifier-question.svg';
+import arrow from '../../assets/images/icons/arrow.svg';
+import edit from '../../assets/images/icons/edit.svg';
+import trash from '../../assets/images/icons/trash.svg';
+import sad from '../../assets/images/icons/sad.svg';
+import emptyBox from '../../assets/images/icons/empty-box.svg';
+import magnifierQuestion from '../../assets/images/icons/magnifier-question.svg';
 
 import Loader from '../../components/Loader';
 import Button from '../../components/Button';
