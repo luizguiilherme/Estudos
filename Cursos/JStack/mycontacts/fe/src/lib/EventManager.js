@@ -21,18 +21,17 @@ export default class EventManeger {
   }
 
   removeListener(event, listenerToRemove) {
-    const listerners = this.listeners[event];
+    const listeners = this.listeners[event];
 
-    if (!listerners) {
+    if (!listeners) {
       return;
     }
 
-    const filteredListeners = listerners.filter(
+    const filteredListeners = listeners.filter(
       (listener) => listener !== listenerToRemove,
-
     );
 
-    this.listerners[event] = filteredListeners;
+    this.listeners[event] = filteredListeners;
   }
 }
 
@@ -41,6 +40,7 @@ const toastEventManeger = new EventManeger();
 function addToast1(payload) {
   console.log('addtoast listener1', payload);
 }
+
 function addToast2(payload) {
   console.log('addtoast listener2', payload);
 }
@@ -50,6 +50,7 @@ toastEventManeger.on('addtoast', addToast2);
 toastEventManeger.emit('addtoast', { type: 'danger', text: 'Texto' });
 
 toastEventManeger.removeListener('addtoast', addToast1);
-toastEventManeger.emit('addtoast', 'depois de remover');
+
+toastEventManeger.removeListener('addtoast', 'depois de remover...');
 
 console.log(toastEventManeger);
