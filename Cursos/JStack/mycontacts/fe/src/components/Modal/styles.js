@@ -46,7 +46,11 @@ export const Footer = styled.footer`
     border: none;
     font-size: 16px;
     margin-right: 24px;
-    color: ${({ theme }) => theme.colors.gray[200]}
+    color: ${({ theme }) => theme.colors.gray[200]};
+
+    &[disabled] {
+      cursor: not-allowed;
+    }
 
   }
 
