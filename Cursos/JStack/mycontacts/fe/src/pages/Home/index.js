@@ -25,7 +25,7 @@ import magnifierQuestion from '../../assets/images/icons/magnifier-question.svg'
 
 import Loader from '../../components/Loader';
 import Button from '../../components/Button';
-// import Modal from '../../components/Modal';
+import Modal from '../../components/Modal';
 
 import ContactsService from '../../services/ContactsService';
 
@@ -77,6 +77,15 @@ export default function Home() {
   return (
     <Container>
       <Loader isLoading={isLoading} />
+      <Modal
+        danger
+        title='tem certeza que seseja remover o contato "Luiz"'
+        confirmLabel="Deletar"
+        onCancel={() => alert('Cancelou')}
+        onConfirm={() => alert('Deletou')}
+      >
+        <h1>asdasdas</h1>
+      </Modal>
 
       {contacts.length > 0 && (
       <InputSearchContainer>
